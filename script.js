@@ -28,6 +28,7 @@ scene.add( light );
 const textureLoader = new THREE.TextureLoader();
 const texture = textureLoader.load('./assets/images/texturesdonut.jpg');
 const texture2 = textureLoader.load('./assets/images/textureLava.jpg');
+const texture3 = textureLoader.load('./assets/images/textureDona.jpg');
 
 
 texture.wrapS = THREE.RepeatWrapping;
@@ -35,13 +36,13 @@ texture.wrapT = THREE.RepeatWrapping;
 texture.repeat.set(7, 7);
 
 // Torus 1
-const geometry = new THREE.TorusGeometry(1.5, 0.5, 8, 50 ); 
+const geometry = new THREE.TorusGeometry(1.5, 0.5, 30, 70 ); 
 const material = new THREE.MeshStandardMaterial( { color: 0xffffff, map: texture } ); 
 const torus = new THREE.Mesh( geometry, material ); 
 scene.add( torus );
 
 // Torus 2
-const geometry2 = new THREE.TorusGeometry(1.5, 0.5, 8, 50 ); 
+const geometry2 = new THREE.TorusGeometry(1.5, 0.5, 30, 70 ); 
 const material2 = new THREE.MeshStandardMaterial( { color: 0xffffff, map: texture2 } ); 
 const torus2 = new THREE.Mesh( geometry2, material2 ); 
 scene.add( torus2 );
@@ -49,8 +50,8 @@ scene.add( torus2 );
 torus2.position.x = 5;
 
 // Torus 3
-const geometry3 = new THREE.TorusGeometry(1.5, 0.5, 8, 50 ); 
-const material3 = new THREE.MeshBasicMaterial( { color: 0xffff00 } ); 
+const geometry3 = new THREE.TorusGeometry(1.5, 0.5, 30, 70 ); 
+const material3 = new THREE.MeshBasicMaterial( { color: 0xffffff,  map: texture3 } ); 
 const torus3 = new THREE.Mesh( geometry3, material3 ); 
 scene.add( torus3 );
 
